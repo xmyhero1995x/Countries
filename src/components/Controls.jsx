@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Controls = () => {
+export const Controls = () => {
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("");
 
@@ -41,5 +41,3 @@ const Controls = () => {
     </Wrapper>
   );
 };
-
-export default Controls;

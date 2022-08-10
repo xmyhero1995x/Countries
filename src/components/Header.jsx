@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 import { Container } from "./Container";
 import { IoMoonOutline, IoMoon } from "react-icons/io5";
@@ -15,8 +17,8 @@ const Wrapper = styled.div`
   padding: 2rem 0;
 `;
 
-const Title = styled.a.attrs({
-  href: "/",
+const Title = styled(Link).attrs({
+  to: "/",
 })`
   color: var(--colors-text);
   font-size: var(--fs-sm);
@@ -33,7 +35,7 @@ const ModeSwitcher = styled.div`
 `;
 ;
 
-const Header = function () {
+export const Header = function () {
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
@@ -60,5 +62,3 @@ const Header = function () {
     </>
   );
 };
-
-export default Header;
