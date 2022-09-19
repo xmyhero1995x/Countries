@@ -18,7 +18,7 @@ export const Details = () => {
   return (
     <>
       <Button onClick={() => navigate(-1)}>
-        <IoArrowBack /> Back
+        <IoArrowBack /> Backk
       </Button>
       {country && <Info navigate = {navigate} {...country} />}
     </>
