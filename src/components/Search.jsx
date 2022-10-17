@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { IoSearchOutline, IoSearch } from "react-icons/io5";
+import { Fragment } from "react";
 
 const InputContainer = styled.label`
   background-color: var(--color-ui-base);
@@ -31,7 +32,7 @@ const Input = styled.input.attrs({
 
 export const Search = ({ search, setSearch }) => {
   return (
-    <>
+    <Fragment>
       <InputContainer>
         <IoSearch/>
         <Input
@@ -39,6 +40,6 @@ export const Search = ({ search, setSearch }) => {
             value={search}
           ></Input>
       </InputContainer>
-    </>
+    </Fragment>
   );
 };

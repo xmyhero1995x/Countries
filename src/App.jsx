@@ -16,7 +16,7 @@ function App() {
       <Header />
       <Main>
         <Routes>
-          <Route exact path="/Countries" element={<HomePage countries={countries} setCountries={setCountries} />} />
+          <Route path="/Countries" element={<HomePage countries={countries} setCountries={setCountries} />} />
           <Route path="/country/:name" element={<Details />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

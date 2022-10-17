@@ -5,6 +5,7 @@ import { searchByCountry } from "../config";
 import axios from "axios";
 import { Button } from "../components/Button";
 import { Info } from "../components/Info";
+import { Fragment } from "react";
 
 export const Details = () => {
   const navigate = useNavigate();
@@ -16,11 +17,11 @@ export const Details = () => {
   });
 
   return (
-    <>
+    <Fragment>
       <Button onClick={() => navigate(-1)}>
-        <IoArrowBack /> Backk
+        <IoArrowBack /> Back
       </Button>
       {country && <Info navigate = {navigate} {...country} />}
-    </>
+    </Fragment>
   );
 };

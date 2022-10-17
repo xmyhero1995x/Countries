@@ -1,6 +1,7 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { useNavigate } from "react-router-dom";
+
 
 import { Card } from "../components/Card";
 import { List } from "../components/List";
@@ -45,7 +46,7 @@ export const HomePage = ({ setCountries, countries }) => {
   }, []);
 
   return (
-    <>
+    <Fragment>
       <Controls onSearch={handleSearch} />
       <List>
         {filteredCountries.map((c) => {
@@ -77,6 +78,6 @@ export const HomePage = ({ setCountries, countries }) => {
           );
         })}
       </List>
-    </>
+    </Fragment>
   );
 };

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Container } from "./Container";
 import { IoMoonOutline, IoMoon } from "react-icons/io5";
+import { Fragment } from "react";
 
 const HeaderEl = styled.header`
   box-shadow: var(--shadow);
@@ -17,9 +18,7 @@ const Wrapper = styled.div`
   padding: 2rem 0;
 `;
 
-const Title = styled(Link).attrs({
-  to: "/",
-})`
+const Title = styled.p`
   color: var(--colors-text);
   font-size: var(--fs-sm);
   text-decoration: none;
@@ -44,7 +43,7 @@ export const Header = function () {
     document.body.setAttribute("data-theme", theme);
   }, [theme]);
   return (
-    <>
+    <Fragment>
       <HeaderEl>
         <Container>
           <Wrapper>
@@ -59,6 +58,6 @@ export const Header = function () {
         </Container>
       </HeaderEl>
       <ion-icon  name="moon-outline"></ion-icon>
-    </>
+    </Fragment>
   );
 };

@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import styled from "styled-components";
 import {Container} from './Container'
 
@@ -12,12 +13,12 @@ const Wrapper = styled.main`
 
 export const Main = ({children}) => {
     return (
-        <>
+        <Fragment>
         <Wrapper>
             <Container>
                 {children}
             </Container>
         </Wrapper>
-        </>
+        </Fragment>
     )
 };
